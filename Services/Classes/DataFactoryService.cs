@@ -12,7 +12,7 @@ public class DataFactoryService : IDataFactoryService
 	private readonly AzureClient _azureClient;
 	private readonly DataFactoryClient _dataFactoryClient;
 	private readonly DefaultAzureCredential _azureCredentials;
-	private readonly string[] _pipelineRunningStatuses = new string[] { "InProgress", "Queued" };
+	private readonly string[] _pipelineRunningStatuses = new string[] { "InProgress", "Queued", "failed" };
 	private DataFactoryManagementClient? _dataFactoryManagementClient;
 	private string? pipelineId;
 	public DataFactoryService(AzureClient azureClient)
